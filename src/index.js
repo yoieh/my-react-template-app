@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 
 import { ConnectedRouter } from "react-router-redux";
 
-import { store, history } from "./redux/store";
+import {Store, History} from "./reducers/store";
 
 import { initialize, addTranslationForLanguage, setActiveLanguage } from 'react-localize-redux';
 
@@ -24,8 +24,9 @@ const languages = [
 
 // const languages =  ['en', 'fr', 'es', 'sv'];
 
-store.dispatch(initialize(languages, { defaultLanguage: 'sv' }));
-store.dispatch(setActiveLanguage('sv'));
+console.log(Store)
+
+Store.dispatch(initialize(languages, { defaultLanguage: 'sv' }));
 
 const jsonEN = {
     "greeting": "Hello",
@@ -47,19 +48,19 @@ const jsonSV = {
     "farwell": "Hejdå"
 }
 
-store.dispatch(addTranslationForLanguage(jsonEN, 'en'));
-store.dispatch(addTranslationForLanguage(jsonFR, 'fr'));
-store.dispatch(addTranslationForLanguage(jsonES, 'es'));
-store.dispatch(addTranslationForLanguage(jsonSV, 'sv'));
+Store.dispatch(addTranslationForLanguage(jsonEN, 'en'));
+Store.dispatch(addTranslationForLanguage(jsonFR, 'fr'));
+Store.dispatch(addTranslationForLanguage(jsonES, 'es'));
+Store.dispatch(addTranslationForLanguage(jsonSV, 'sv'));
 
 // Now you can dispatch navigation actions from anywhere!
-// store.dispatch(push('/Home'))
+// Store.dispatch(push('/Home'))
 
 ReactDOM.render(
-  <Provider store={store}>
-    {/* ConnectedRouter will use the store from Provider automatically */}
-    <ConnectedRouter history={history}>
-        <App />
+  <Provider store={Store}>
+    {/* ConnectedRouter will use the Store from Provider automatically */}
+    <ConnectedRouter history={History}>
+        <App store={Store}/>
     </ConnectedRouter>
   </Provider>,
   document.getElementById("root")
