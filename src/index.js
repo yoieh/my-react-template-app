@@ -7,7 +7,7 @@ import { ConnectedRouter } from "react-router-redux";
 
 import {Store, History} from "./reducers/store";
 
-import { initialize, addTranslationForLanguage, setActiveLanguage } from 'react-localize-redux';
+import { initialize, addTranslationForLanguage } from 'react-localize-redux';
 
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";

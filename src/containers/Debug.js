@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 
-import Farwell from "../containers";
+import {Farwell} from "../components";
 
 class Debug extends Component {
 
@@ -27,4 +27,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Debug));
+export default withRouter(connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Debug))

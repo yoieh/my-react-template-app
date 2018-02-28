@@ -7,13 +7,9 @@ import { Route, Switch, Redirect } from "react-router";
 
 import {Home, Header, Debug, NotFound} from "./containers"
 
-
-
 class App extends Component {
 
   render() {
-    let { store } = this.props
-
     return (
       <div className="App">
         <header>
