@@ -3,10 +3,18 @@ import './Test.css';
 
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
+import { setActiveLanguage } from "react-localize-redux";
+
+import Farwell from '../../commen/Farwell';
+
 
 class Test extends Component {
   render() {
     let {locale, id} = this.props.match.params
+    let { setLang } = this.props
+
+    setLang(locale || 'en')
+
     return (
       <div className="Test">
         TEST
@@ -16,6 +24,7 @@ class Test extends Component {
         <div>
           {id ? id : null}
         </div>
+        <Farwell />
       </div>
     );
   }
@@ -23,11 +32,13 @@ class Test extends Component {
 
 const mapStateToProps = state => {
   return {
-  }
+      
+}
 }
  
 const mapDispatchToProps = dispatch => {
-  return {
+    return {
+        setLang: lang => dispatch(setActiveLanguage(lang))
   }
 }
 

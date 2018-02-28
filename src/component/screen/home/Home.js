@@ -4,11 +4,14 @@ import './Home.css';
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
+import Greeting from '../../commen/Greeting';
+
 class Home extends Component {
   render() {
     return (
       <div className="Home">
         Home
+        <Greeting />
       </div>
     );
   }
