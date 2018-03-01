@@ -61,9 +61,9 @@
     "deploy": "firebase deploy"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6",
-    "serve": "^6.5.0"
+    "sass-loader": "^6.0.6"
   },
   "jest": {
     "collectCoverageFrom": [

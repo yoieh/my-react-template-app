@@ -1,0 +1,27 @@
+{
+    "javascript.validate.enable": false,
+    "javascript.referencesCodeLens.enabled": true,
+    "javascript.format.enable": true,
+    "javascript.nameSuggestions": true,
+    "flow.useNPMPackagedFlow": true,
+    "flow.showStatus": true,
+    "flow.runOnEdit": true,
+    "flow.enabled": true,
+    "psi-header.config": {
+        "forceToTop": true,
+    },
+    "psi-header.templates": [
+        {
+            "language": "*",
+            "template": [
+                "@flow",
+                "Project: <<projectname>>",
+                "Author: <<author>> (<<authoremail>>)",
+                "Copyright <<projectCreationYear>> - <<year>> <<copyrightholder>>, <<company>>"
+            ]
+        }
+    ],
+    "psi-header.changes-tracking": {
+        "autoHeader": "autoSave"
+    },
+}
