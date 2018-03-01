@@ -17,11 +17,12 @@ import { Store, History } from "./reducers/store";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 
+import services from './services/';
+
 import "./scss/style.scss";
 import "./index.css";
 
-// Now you can dispatch navigation actions from anywhere!
-// Store.dispatch(push('/Home'))
+services.language.init(Store);
 
 ReactDOM.render(
 	<Provider store={Store}>

@@ -15,7 +15,7 @@ import { createStore, applyMiddleware, combineReducers, compose } from "redux";
 import * as reducers from "./";
 
 export const History = createHistory()
-export const configureStore = (initialState = {}) => {
+export const configureStore = (initialState: any = {}) => {
     const rootReducer = combineReducers({reducers, router: routerReducer, locale: localeReducer
     });
     const middleware = applyMiddleware(routerMiddleware(History))

@@ -6,7 +6,7 @@
  */
 
 // Reducer
-export default function reducer(state = {}, action = {}) {
+export default function reducer(state: any = {}, action: any = {}) {
   switch (action.type) {
     // do reducer stuff
     default: return state;

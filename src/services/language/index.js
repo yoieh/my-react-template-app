@@ -1,6 +1,11 @@
 
 
-// @flow
+/**
+ * @flow
+ * Project: my-react-template-app
+ * Author: Johan Nilsson (johan.nilsson@nerdsofsweden.se)
+ * Copyright 2017 - 2018 Golfhaftet, OnTee
+ */
 
 import { initialize, addTranslationForLanguage } from "react-localize-redux";
 
@@ -43,3 +48,7 @@ export const init = (store: any) => {
     
     return true
 };
+
+export default {
+    init
+}
